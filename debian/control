@@ -1,0 +1,37 @@
+Source: linux-beryllium
+Section: pocophone-f1
+Priority: optional
+Maintainer: Ivan J. <parazyd@dyne.org>
+Build-Depends:
+ debhelper-compat (= 12),
+ rsync,
+ kmod,
+ bc,
+ flex,
+ bison,
+ libssl-dev:native,
+ libssl-dev,
+ liblz4-tool,
+ u-boot-tools,
+ device-tree-compiler,
+Standards-Version: 4.3.0
+Homepage: https://www.kernel.org/
+
+Package: linux-image-beryllium
+Architecture: arm64
+Description: Linux kernel for beryllium devices
+ This package contains the Linux kernel, modules, and corresponding other files.
+
+Package: linux-headers-beryllium
+Architecture: arm64
+Provides: linux-headers
+Description: Linux kernel headers for beryllium devices
+ This package provides kernel header files for beryllium devices
+ .
+ This is useful for people who need to build external modules
+
+Package: linux-image-beryllium-dbg
+Architecture: arm64
+Description: Linux kernel debugging symbols for beryllium devices
+ This package will come in handy if you need to debug the kernel. It provides
+ all the necessary debug symbols for the kernel and its modules.
